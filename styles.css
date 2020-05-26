@@ -82,20 +82,27 @@ footer {
     background-color: #ABC1D8;
 }
 
-
-#animation-brain {
+.animations {
     display: flex;
     flex-direction: row;
     justify-content: center;
     position: absolute;
     width: 100%;
     height: 50%;
-    z-index: 1;
+    z-index: 2;
     opacity: 0.3;
-    background-image: url(brain.svg);
     background-repeat:no-repeat;
     background-position: center center;
     background-size: contain;
+}
+
+#animation-brain {
+    background-image: url(brain.svg);
+    animation-name: onoff-brain;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    visibility: hidden;
 }
 
 .points {
@@ -108,8 +115,28 @@ footer {
     animation-timing-function: linear;
 }
 
+@keyframes onoff-brain {    
+    0% {
+        opacity: 0.3;
+        visibility: visible;
+    }
+
+    50% {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.1;
+        visibility: visible;
+    }
+}
+
 @keyframes bounce {
-    
     25% {
         transform: translateY(-120px);
     }
@@ -133,4 +160,60 @@ footer {
 
 #p4 {
     animation-delay: 0.3s;
+}
+
+
+#animation-notes {
+    background-image: url(project.svg);
+    animation-name: onoff-notes;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    visibility: hidden;
+}
+
+#pen {
+    animation-name: writing;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes onoff-notes {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    49% {
+        opacity: 0.1;
+        visibility: visible;
+    }
+
+    50% {
+        opacity: 0.3;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes writing {
+    25% {
+        transform: translate(90px, -120px);
+    }
+
+    50% {
+        transform: translate(-50px, -50px);
+    }
+
+    75% {
+        transform: translate(120px, 10px);
+    }
 }
