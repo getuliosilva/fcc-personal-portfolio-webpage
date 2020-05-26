@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ABC1D8;
+}
+
+#navbar {
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    z-index: 3;
+}
+
+.section-links {
+    text-decoration: none !important;
+    text-align: center;
+    font-size: larger;
+    text-transform: uppercase;
+}
+
+.link-divs {
+    background-color: #898A9E;
+    margin: 10px;
+    color: white;
+}
+
+.section {
+    height: 100vh;
+}
+
+.blank-space {
+    height: 120px;
+}
+
+#welcome-section {
+    background-color: #AFE3FC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: larger;
+}
+
+#name {
+    z-index: 2;
+}
+
+#projects {
+    background-color: #6492AA;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#contact {
+    background-color: #ABC1D8;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#contact-links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.contact-link {
+    background-color: #6492AA;
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    margin-top: auto;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: #ABC1D8;
+}
+
+
+#animation-brain {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    z-index: 1;
+    opacity: 0.3;
+    background-image: url(brain.svg);
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.points {
+    margin: 10px;
+    padding: 0;
+    width: 30px;
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-60px);
+    }
+    50% {
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(-60px);
+    }
+}
+
+#p1 {
+    animation-delay: 1.2s;
+}
+
+#p2 {
+    animation-delay: 0.9s;
+}
+
+#p3 {
+    animation-delay: 0.6s;
+}
+
+#p4 {
+    animation-delay: 0.3s;
+}
