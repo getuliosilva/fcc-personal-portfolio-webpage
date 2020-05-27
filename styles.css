@@ -117,22 +117,11 @@ footer {
 
 @keyframes onoff-brain {    
     0% {
-        opacity: 0.3;
         visibility: visible;
     }
 
-    50% {
-        opacity: 0;
+    33% {
         visibility: hidden;
-    }
-
-    90% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 0.1;
-        visibility: visible;
     }
 }
 
@@ -180,26 +169,18 @@ footer {
 
 @keyframes onoff-notes {
     0% {
-        opacity: 0;
         visibility: hidden;
     }
 
-    40% {
-        opacity: 0;
+    33% {
+        visibility: hidden;
     }
 
-    49% {
-        opacity: 0.1;
+    34% {
         visibility: visible;
     }
 
-    50% {
-        opacity: 0.3;
-        visibility: visible;
-    }
-
-    100% {
-        opacity: 0;
+    65% {
         visibility: hidden;
     }
 }
@@ -215,5 +196,45 @@ footer {
 
     75% {
         transform: translate(120px, 10px);
+    }
+}
+
+#animation-computer {
+    background-image: url(screen1.svg);
+    animation-name: computer, onoff-computer;
+    animation-duration: 1s, 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes computer {
+    0% {
+        background-image: url(screen1.svg);
+    }
+
+    33% {
+        background-image: url(screen2.svg);
+    }
+
+    66% {
+        background-image: url(screen3.svg);
+    }
+}
+
+@keyframes onoff-computer {
+    0% {
+        visibility: hidden;
+    }
+
+    65% {
+        visibility: hidden;
+    }
+
+    66% {
+        visibility: visible;
+    }
+
+    100% {
+        visibility: hidden;
     }
 }
