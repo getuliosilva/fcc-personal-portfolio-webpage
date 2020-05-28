@@ -194,13 +194,10 @@ footer {
     animation-name: writing;
     animation-duration: 3s;
     animation-iteration-count: infinite;
-    border-style: solid;
-    border-color: tomato;
 }
 
 #pen {
     max-width: 100%;
-    border-style: solid;
 }
 
 @keyframes onoff-notes {
