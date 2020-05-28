@@ -245,7 +245,7 @@ footer {
 
 @keyframes computer {
     0% {
-        background-image: url(screen1.svg);
+        background-image: url(screen1.png);
         background-repeat:no-repeat;
         background-position: center center;
         background-size: contain;
