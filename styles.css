@@ -233,7 +233,7 @@ footer {
 }
 
 #animation-computer {
-    background-image: url(screen1.svg);
+    background-image: url(screen1.png);
     background-repeat:no-repeat;
     background-position: center center;
     background-size: contain;
@@ -252,14 +252,14 @@ footer {
     }
 
     33% {
-        background-image: url(screen2.svg);
+        background-image: url(screen2.png);
         background-repeat:no-repeat;
         background-position: center center;
         background-size: contain;
     }
 
     66% {
-        background-image: url(screen3.svg);
+        background-image: url(screen3.png);
         background-repeat:no-repeat;
         background-position: center center;
         background-size: contain;
