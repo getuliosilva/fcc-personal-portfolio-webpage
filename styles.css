@@ -29,7 +29,7 @@ body{
 }
 
 .section {
-    height: 100vh;
+    min-height: 100vh;;
 }
 
 .blank-space {
@@ -44,6 +44,7 @@ body{
     text-transform: uppercase;
     text-align: center;
     font-size: larger;
+    height: 100vh;
 }
 
 #name {
@@ -54,6 +55,20 @@ body{
     background-color: #6492AA;
     text-align: center;
     text-transform: uppercase;
+}
+
+.project-div {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    font-size: medium;
+    text-transform: none;
+}
+
+.project-image {
+    max-width: 30%;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 #contact {
@@ -69,10 +84,14 @@ body{
 }
 
 .contact-link {
+    display: flex;
     background-color: #6492AA;
     margin: 10px;
+    height: 50px;
     color: white;
     text-decoration: none;
+    align-items: center;
+    justify-content: center;
 }
 
 footer {
@@ -80,6 +99,10 @@ footer {
     margin-bottom: 10px;
     text-align: center;
     background-color: #ABC1D8;
+}
+
+.footer-note {
+    padding: 10px;
 }
 
 .animations {
@@ -154,6 +177,9 @@ footer {
 
 #animation-notes {
     background-image: url(project.svg);
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-size: contain;
     animation-name: onoff-notes;
     animation-duration: 20s;
     animation-iteration-count: infinite;
@@ -161,10 +187,20 @@ footer {
     visibility: hidden;
 }
 
-#pen {
+#pen-container {
+    max-width: 25%;
+    max-height: 30%;
+    margin-top: 50%;
     animation-name: writing;
     animation-duration: 3s;
     animation-iteration-count: infinite;
+    border-style: solid;
+    border-color: tomato;
+}
+
+#pen {
+    max-width: 100%;
+    border-style: solid;
 }
 
 @keyframes onoff-notes {
@@ -187,20 +223,23 @@ footer {
 
 @keyframes writing {
     25% {
-        transform: translate(90px, -120px);
+        transform: translate(25%, -120px);
     }
 
     50% {
-        transform: translate(-50px, -50px);
+        transform: translate(-60px, -50px);
     }
 
     75% {
-        transform: translate(120px, 10px);
+        transform: translate(90px, 10px);
     }
 }
 
 #animation-computer {
     background-image: url(screen1.svg);
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-size: contain;
     animation-name: computer, onoff-computer;
     animation-duration: 1s, 20s;
     animation-iteration-count: infinite;
@@ -210,14 +249,23 @@ footer {
 @keyframes computer {
     0% {
         background-image: url(screen1.svg);
+        background-repeat:no-repeat;
+        background-position: center center;
+        background-size: contain;
     }
 
     33% {
         background-image: url(screen2.svg);
+        background-repeat:no-repeat;
+        background-position: center center;
+        background-size: contain;
     }
 
     66% {
         background-image: url(screen3.svg);
+        background-repeat:no-repeat;
+        background-position: center center;
+        background-size: contain;
     }
 }
 
