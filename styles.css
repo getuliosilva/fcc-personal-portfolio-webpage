@@ -29,7 +29,8 @@ body{
 }
 
 .section {
-    min-height: 100vh;;
+    min-height: 100vh;
+    padding: 10px;
 }
 
 .blank-space {
@@ -66,9 +67,21 @@ body{
 }
 
 .project-image {
-    max-width: 30%;
+    max-width: 64px;
+    max-height: 113.6px;
+    width: auto;
+    height: auto;
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.project-text {
+    width: 70%;
+}
+
+.project-description {
+    margin: 20px;
+    text-align: justify;
 }
 
 #contact {
@@ -120,12 +133,17 @@ footer {
 }
 
 #animation-brain {
-    background-image: url(brain.svg);
     animation-name: onoff-brain;
-    animation-duration: 20s;
+    animation-duration: 9s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     visibility: hidden;
+}
+
+#brain {
+    position: absolute;
+    max-width: 100%;
+    margin-top: 10px;
 }
 
 .points {
@@ -181,7 +199,7 @@ footer {
     background-position: center center;
     background-size: contain;
     animation-name: onoff-notes;
-    animation-duration: 20s;
+    animation-duration: 9s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     visibility: hidden;
@@ -232,41 +250,92 @@ footer {
     }
 }
 
+.s {
+    position: absolute;
+    max-width: 90%;
+}
+
 #animation-computer {
-    background-image: url(screen1.png);
-    background-repeat:no-repeat;
-    background-position: center center;
-    background-size: contain;
-    animation-name: computer, onoff-computer;
-    animation-duration: 1s, 20s;
+    animation-name: onoff-computer;
+    animation-duration: 9s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
 
-@keyframes computer {
+@keyframes onoff-computer {
     0% {
-        background-image: url(screen1.png);
-        background-repeat:no-repeat;
-        background-position: center center;
-        background-size: contain;
+        visibility: hidden;
+        opacity: 0;
     }
 
-    33% {
-        background-image: url(screen2.png);
-        background-repeat:no-repeat;
-        background-position: center center;
-        background-size: contain;
+    65% {
+        visibility: hidden;
+        opacity: 0;
     }
 
     66% {
-        background-image: url(screen3.png);
-        background-repeat:no-repeat;
-        background-position: center center;
-        background-size: contain;
+        visibility: visible;
+        opacity: 0.3;
+    }
+
+    100% {
+        visibility: hidden;
     }
 }
 
-@keyframes onoff-computer {
+#s1 {
+    visibility: hidden;
+    animation-name: as1;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes as1 {
+    0% {
+        visibility: visible;
+    }
+
+    32% {
+        visibility: hidden;
+    }
+}
+
+#s2 {
+    visibility: hidden;
+    animation-name: as2;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes as2 {
+    0% {
+        visibility: hidden;
+    }
+
+    32% {
+        visibility: hidden;
+    }
+
+    33% {
+        visibility: visible;
+    }
+
+    65% {
+        visibility: hidden;
+    }
+}
+
+#s3 {
+    visibility: hidden;
+    animation-name: as3;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes as3 {
     0% {
         visibility: hidden;
     }
